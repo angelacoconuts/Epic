@@ -1,0 +1,23 @@
+body {
+    background-color: #111;
+    width: 100%;
+}
+.full-width{
+    width: 100%;
+}
+.icon-white, .icon-white a{
+    color: #fff;
+    font-size: 1.5em;
+    margin: auto;
+    padding: 15px 20px 10px 0px;
+    text-shadow: 2px 3px 5px #666;
+}
+.navbar-inner {
+    background-color: #111;
+    height: 50px;
+    box-shadow: inset 0px 0px 80px #333;
+}
+.block {
+    background-color: #111;
+    border: 1.5px solid #888;
+}
