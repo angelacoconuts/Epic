@@ -5,7 +5,7 @@
        "children": [
 	   { "name": "AAPL", "size":50, "perf":4 },
 	   { "name": "KORS", "size":30, "perf":2 },
-	   { "name": "GOOG", "size":100, "perf":10 },
+	   { "name": "GOOG", "size":100, "perf":5 },
 	   { "name": "GNC", "size":50, "perf":-1 }
        ]
      },
@@ -14,7 +14,7 @@
 	   { "name": "HSBC", "size":50, "perf":0 },
 	   { "name": "UBS", "size":300, "perf":2 },
 	   { "name": "DBS", "size":200, "perf":2 },
-	   { "name": "JP Morgan Chase", "size":100, "perf":-2 }
+	   { "name": "JP Morgan Chase", "size":100, "perf":-5 }
        ]
      },
      { "name": "Commodity",

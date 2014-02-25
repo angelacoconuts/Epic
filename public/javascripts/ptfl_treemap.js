@@ -1,11 +1,17 @@
-var margin = {top: 10, right: 10, bottom: 10, left: 10},
+/*var margin = {top: 0, right: 0, bottom: 0, left: 0},
     width = 680 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom; */
 
-var color = d3.scale.category20c();
+var margin = {top: 0, right: 0, bottom: 0, left: 0},
+    width = document.getElementById('chart').offsetWidth - margin.left - margin.right,
+    height = document.getElementById('chart').offsetHeight - margin.top - margin.bottom; 
+
+var color = d3.scale.linear()
+        .domain([-5,0,5])
+        .range(["#990000","#666666","#003c00"]);
 
 var treemap = d3.layout.treemap()
-    .size([660, 480])
+    .size([width, height])
     .sticky(true)
     .value(function(d) { return d.size; });
 
@@ -22,7 +28,7 @@ d3.json("/data/ptfl.json", function(root) {
     .enter().append("div")
       .attr("class", "node")
       .call(position)
-      .style("background", function(d) { return d.children ? color(d.name) : null; })
+      .style("background", function(d) { return d.children ? null : color(d.perf); })
       .text(function(d) { return d.children ? null : d.name; });
 
 });
