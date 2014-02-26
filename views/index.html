@@ -44,11 +44,10 @@
       <div class="col-sm-4"><h3 class="glossy">Helicopter View<h3></div>
 
       <div id="currency-sel" class="btn-group pull-right">
-	  <button type="button" class="btn dropdown-toggle transparent body-font" data-toggle="dropdown" ng-click="focus('currency-sel')">
-	        Currency <span class="caret"></span>
+	  <button type="button" class="btn dropdown-toggle transparent body-font" data-toggle="dropdown" ng-click="focus('currency-sel')">{{currency_sel.name}} <span class="caret"></span>
 	  </button>
 	    <ul class="dropdown-menu transparent" role="menu">
-	          <li class="dropdown-grid" ng-repeat="currency in currencies" ng-click="chgCurrency(currency); blur('currency-sel')">{{currency.name}}</li>
+	          <li class="dropdown-grid" ng-repeat="currency in currencies" ng-click="chgCurrency(currency); blur('currency-sel')">{{currency.name}} - {{currency.desp}} ({{currency.sign}})</li>
 	    </ul>
       </div>
 
@@ -82,14 +81,14 @@
                     <thead>
                       <tr>
 			<th>Asset</th>
-			<th>Market Value/{{currency}}</th>
+			<th>Market Value/{{currency_sel.name}}</th>
 			<th>Perf/{{time_range}}</th>
 			</tr>
                       </thead>
                     <tbody>
                       <tr ng-repeat="asset in assets">
 			<td>{{asset.name}}</td>
-			<td>{{format(currency_sign, asset.volume)}}</td>
+			<td>{{format(currency_sel.sign, asset.volume)}}</td>
 			<td>{{asset.perf}}%</td>
 			</tr>
                       </tbody>

@@ -10,15 +10,20 @@ function ($scope) {
 	];
 
     $scope.currencies = [
-	{name:"USD",sign:"$"},
-	{name:"HKD",sign:"$"},
-	{name:"CNY",sign:""},
-	{name:"EUR",sign:""},
-	{name:"GBP",sign:""},
+	{name:"USD",desp:"U.S. Dollar",sign:"US$"},
+	{name:"HKD",desp:"Hong Kong Dollar",sign:"HK$"},
+	{name:"SGD",desp:"Singapore Dollar",sign:"S$"},
+	{name:"AUD",desp:"Australian Dollar",sign:"A$"},
+	{name:"TWD",desp:"Taiwan Dollar",sign:"NT$"},
+	{name:"CAD",desp:"Canadian Dollar",sign:"C$"},
+	{name:"CNY",desp:"Chinese Yuan",sign:""},
+	{name:"JPY",desp:"Japan Yen",sign:""},
+	{name:"EUR",desp:"Euro",sign:""},
+	{name:"CHF",desp:"Swiss Franc",sign:"Fr"},
+	{name:"GBP",desp:"Britsh Pound",sign:""},
 ];
 
-$scope.currency = $scope.currencies[0].name;
-$scope.currency_sign = $scope.currencies[0].sign;
+$scope.currency_sel = $scope.currencies[0];
 $scope.time_range = $scope.ranges[2];
 
 $scope.articles = [
@@ -59,8 +64,7 @@ $scope.chgRange = function(selection){
 };
 
 $scope.chgCurrency = function(selection){
-    $scope.currency = selection.name;
-    $scope.currency_sign = selection.sign;
+    $scope.currency_sel = selection;
 };
 
 $scope.focus = function(target){
