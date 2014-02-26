@@ -1,8 +1,4 @@
-/*var margin = {top: 0, right: 0, bottom: 0, left: 0},
-    width = 680 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom; */
-
-var margin = {top: 0, right: 0, bottom: 0, left: 0},
+var margin = {top: 10, right: 10, bottom: 10, left: 10},
     width = document.getElementById('chart').offsetWidth - margin.left - margin.right,
     height = document.getElementById('chart').offsetHeight - margin.top - margin.bottom; 
 

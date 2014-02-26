@@ -1,23 +1,114 @@
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
 body {
+    position: relative;
     background-color: #111;
     width: 100%;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+.header-font {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color: #eee;
+}
+.body-font {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    color: #eee;
 }
 .full-width{
     width: 100%;
 }
+.transparent {
+    background-color: transparent;
+}
+.glossy {
+    background: -webkit-linear-gradient(#fff, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.box-glossy{
+    box-shadow: inset 0px 0px 60px #444;
+}
 .icon-white, .icon-white a{
-    color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: auto;
-    padding: 15px 20px 10px 0px;
-    text-shadow: 2px 3px 5px #666;
+    padding: 16px 20px 10px 0px;
 }
 .navbar-inner {
     background-color: #111;
     height: 50px;
-    box-shadow: inset 0px 0px 80px #333;
 }
-.block {
+#top-panel h3 {
+    margin-top: 12px;
+    font: 22px 'Fanwood Text', serif;
+}
+#currency-sel {
+    color: #eee;
+    padding: 8px 15px;
+    margin: 0px;
+//  border: 1px solid #eee;    
+}
+#currency-sel button {
+    color: #eee;
+}
+#currency-sel .dropdown-grid {
+    text-align: center;
+    border: 1px solid #eee;
+    color: #eee;
+    line-height: 2;
+    margin: 5px;
     background-color: #111;
-    border: 1.5px solid #888;
+}
+.dropdown-toggle {
+    color: #eee;
+}
+.insight-block {
+    height: 50%; 
+    padding:10px 10px;
+}
+.insight-label {
+    color: #eee;
+    text-indent: 5px;
+    width: 120px;
+    margin-bottom: 5px;
+    padding: 1.5px 0px;
+}
+.insight-block img {
+    padding: 0px;
+    height: 63px;
+    width: 100px;
+}
+.insight-block h5 {
+    color: #eee;
+    margin-top: 0px;
+}
+#right-panel {
+    height: 100%;
+    padding: 0;
+}
+#accordion h2 {
+    padding: 0.5em 1em;
+    color: #eee;
+    font-size: 1em;
+}
+#accordion div {
+    padding: 0 0.3em;
+    margin: 0;
+    font-size: 12px;
+}
+.btn-range {
+    color: #666;
+    background-color: #eee;
+    border: 1.8px solid #111;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 10;
 }
